@@ -4534,7 +4534,7 @@ position: absolute;
 .product-deatalis h3{
     
         font-size: 18px;
-    color: #000;
+    color: var(--clr-9);
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -4579,7 +4579,7 @@ position: absolute;
  font-size: 24px;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    color: #000;
+    color: var(--clr-9);
     padding-bottom: 15px;   
 }
 
@@ -4587,7 +4587,7 @@ position: absolute;
     font-size: 13px;
     font-family: "Montserrat", sans-serif;
     line-height: 24px;
-    color: #666666;
+    color: var(--clr-4);
     letter-spacing: .4px;
     border-top: 1px solid #d6d6d6;
     border-bottom: 1px solid #d6d6d6;
@@ -4683,7 +4683,7 @@ font-family: "Montserrat", sans-serif;
     cursor: pointer;
     transition: 1s ease;
     font-size: 12px;
-    color: #666666;
+    color: var(--clr-4);
     letter-spacing: 1px;
 display: inline-block;
     padding: 0px 15px;
@@ -5163,7 +5163,7 @@ font-size: 15px;
     border-bottom: 1px solid #d6d6d6;
     position: relative;
 }
-.rel-prod-heading h3{font-size: 20px; margin:0px 0px 10px;font-family: "Montserrat", sans-serif }
+.rel-prod-heading h3{font-size: 20px; margin:0px 0px 10px;font-family: "Montserrat", sans-serif;color: var(--clr-9) }
 .rel-prod-heading h3::after{
   content: "";
     position: absolute;
