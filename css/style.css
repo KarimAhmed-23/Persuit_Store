@@ -1828,7 +1828,7 @@ display: flex;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    animation: slidermove 1s ease ;
+    animation: slidermove 0.8s ease forwards ;
 
     
 
@@ -1885,7 +1885,7 @@ top: 35%;
     
     margin: 0;
     font-size: 50px;
-    animation: text 1s  ease forwards .6s;  
+    animation: text 1s  ease forwards .8s;  
     opacity: 0;
     text-transform: capitalize;
 
@@ -1894,7 +1894,7 @@ top: 35%;
     
 animation: text 1s  ease forwards;    
     font-size: 20px;
-    animation-delay: 0.8s;
+    animation-delay: 1s;
     color: wheat;
     opacity: 0;
   text-transform: capitalize;
