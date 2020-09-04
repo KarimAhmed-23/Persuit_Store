@@ -106,14 +106,16 @@ close_search.addEventListener("click" ,function(){
 
 
 
+
  var heartIcon = document.querySelectorAll('.heart-icon'),
      like_model = document.querySelector('.like-model'),
      iconLike = document.querySelector('.icon-like'),
-     likeName = document.querySelector('.like-name');
+     likeName = document.querySelector('.like-name'),
+     likeName_p = document.querySelector('.likeName p');
 
 function add_like(){
    like_model.classList.add('active');
-    likeName.classList.add('active');
+    likeName.classList.add('open');
     remove_Model_1();
     remove_Model_2();
 
@@ -122,10 +124,10 @@ function add_like(){
 function remove_Model_1(){
     
   setTimeout(function(){
-  likeName.classList.remove('active');
+          likeName.classList.remove('open');
 
 
-  },4900);  
+  },4300);  
 }
 
 function remove_Model_2(){
@@ -138,6 +140,17 @@ function remove_Model_2(){
 }
 
 heartIcon.forEach(heart => heart.addEventListener('click', add_like));
+
+heartIcon.forEach(heart => heart.addEventListener('click', function(){
+    
+this.classList.add("active");  
+    
+if(this.classList.contains("active")){
+    this.removeEventListener("click",  add_like)
+   }    
+    
+}));
+
 
 
 
@@ -413,180 +426,31 @@ view_icons.forEach(v => v.addEventListener('click', function(){
 
 
 
-var add1= document.getElementById('add-1'),
-    add2 = document.getElementById("add-2"),
-    add3 = document.getElementById("add-3"),
-    add4 = document.getElementById("add-4"),
-    add5 = document.getElementById("add-5"),
-    add6 = document.getElementById("add-6"),
-    add7 = document.getElementById("add-7"),
-    add8 = document.getElementById("add-8"),
-    add9 = document.getElementById("add-9"),
-    add_10 = document.getElementById("add-10"),
-    add_11 = document.getElementById("add-11"),
-    add_12 = document.getElementById("add-12"),
+var 
     model = document.querySelector('.addto-card'),
     imgModel = document.querySelector('.img-model'),
     captionModel = document.getElementById('addto-text'), 
-    add_A = Array.from(document.querySelectorAll('.add a'))  ;
+    add_item = document.querySelectorAll('.add');
+
+    console.log(add_item);
 
 
+for (adds of add_item){
+    
+    adds.addEventListener("click", function(){
+        modelShow();
+  this.firstElementChild.innerHTML = "ADD TO CARD " + " <li class='fa'>&#xf00c</li>";
 
     
-  
-
-
-
-
-
-add1.addEventListener("click",function(){
-    modelShow();
-    
-imgModel.src = add1.parentElement.parentElement.parentElement.firstElementChild.getAttribute("src");
-captionModel.innerHTML = add1.parentElement.parentElement.previousElementSibling.getAttribute("alt") +
-    " has been added to your cart. " ;
-    
-    removeModel();
-
-    
-});
-
-add2.addEventListener("click",function(){
-     modelShow();
-    
-imgModel.src = add2.parentElement.parentElement.parentElement.firstElementChild.getAttribute("src");
-captionModel.innerHTML = add2.parentElement.parentElement.previousElementSibling.getAttribute("alt") +
-        " has been added to your cart. " ;
-    
-     removeModel();
-
-});
-
-add3.addEventListener("click",function(){
-   
-    modelShow();
-    
-imgModel.src = add3.parentElement.parentElement.parentElement.firstElementChild.getAttribute("src");
-captionModel.innerHTML = add3.parentElement.parentElement.previousElementSibling.getAttribute("alt") +
-            " has been added to your cart. " ;
-    
-   removeModel();
-
-});
-
-
-add4.addEventListener("click",function(){
-    
-   modelShow();
-    
-imgModel.src = add4.parentElement.parentElement.parentElement.firstElementChild.getAttribute("src");
-captionModel.innerHTML = add4.parentElement.parentElement.previousElementSibling.getAttribute("alt") +
-            " has been added to your cart. " ;
-    
-   removeModel();
-
-});
-
-
-add5.addEventListener("click",function(){
-    
-    modelShow();
-    
-imgModel.src = add5.parentElement.parentElement.parentElement.firstElementChild.getAttribute("src");
-captionModel.innerHTML = add5.parentElement.parentElement.previousElementSibling.getAttribute("alt") +
-            " has been added to your cart. " ;
-    
-   removeModel();
-});
-
-
-add6.addEventListener("click",function(){
-    
-   modelShow();
-    
-imgModel.src = add6.parentElement.parentElement.parentElement.firstElementChild.getAttribute("src");
-captionModel.innerHTML = add6.parentElement.parentElement.previousElementSibling.getAttribute("alt") +
-            " has been added to your cart. " ;
-    
-   removeModel();
-
-});
-
-
-add7.addEventListener("click",function(){
-    
-    modelShow();
-    
-imgModel.src = add7.parentElement.parentElement.parentElement.firstElementChild.getAttribute("src");
-captionModel.innerHTML = add7.parentElement.parentElement.previousElementSibling.getAttribute("alt") +
-            " has been added to your cart. " ;
-    
-   removeModel();
-
-});
-
-
-add8.addEventListener("click",function(){
-    
-     modelShow();
-    
-imgModel.src = add8.parentElement.parentElement.parentElement.firstElementChild.getAttribute("src");
-captionModel.innerHTML = add8.parentElement.parentElement.previousElementSibling.getAttribute("alt") +
-            " has been added to your cart. " ;
-    
-     removeModel();
-});
-
-
-add9.addEventListener("click",function(){
-    
-   modelShow();
-    
-imgModel.src = add9.parentElement.parentElement.parentElement.firstElementChild.getAttribute("src");
-captionModel.innerHTML = add9.parentElement.parentElement.previousElementSibling.getAttribute("alt") +
-            " has been added to your cart. " ;
-    
-   removeModel();
-
-});
-
-
-add_10.addEventListener("click",function(){
-    
-  modelShow();
-    
-imgModel.src = add_10.parentElement.parentElement.parentElement.firstElementChild.getAttribute("src");
-captionModel.innerHTML = add_10.parentElement.parentElement.previousElementSibling.getAttribute("alt") +
-            " has been added to your cart. " ;
-    
-   removeModel();
-
-});
-
-
-add_11.addEventListener("click",function(){
-    
-     modelShow();
-    
-imgModel.src = add_11.parentElement.parentElement.parentElement.firstElementChild.getAttribute("src");
-captionModel.innerHTML = add_11.parentElement.parentElement.previousElementSibling.getAttribute("alt") +
-            " has been added to your cart. " ;
-    
-   removeModel();
-});
-
-
-add_12.addEventListener("click",function(){
-    
-     modelShow();
-    
-imgModel.src = add_12.parentElement.parentElement.parentElement.firstElementChild.getAttribute("src");
-captionModel.innerHTML = add_12.parentElement.parentElement.previousElementSibling.getAttribute("alt") +
-            " has been added to your cart. " ;
-    
-   removeModel();
-});
-
+imgModel.src = this.parentElement.parentElement.parentElement.firstElementChild.getAttribute("src");
+captionModel.innerHTML = this.parentElement.parentElement.previousElementSibling.getAttribute("alt") +
+    " has been added to your cart. " ; 
+        
+            removeModel();
+clearTimeout(removeModel);
+        
+    })
+};
 
 function modelShow(){
 
@@ -598,11 +462,8 @@ function removeModel(){
   setTimeout(function(){
     
     model.classList.remove('active');
-  },4000);  
+  },3000);  
 }
-
-
-
 
 
 
