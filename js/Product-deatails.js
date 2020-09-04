@@ -59,14 +59,26 @@ addCartBtn.addEventListener("click" ,function(){
 
 function add_like(){
    like_model.classList.add('active');
-    likeName.classList.add('active')
-    remove_Model(); 
+    likeName.classList.add('open');
+    remove_Model_1();
+    remove_Model_2();
 }
 
-function remove_Model(){
+function remove_Model_1(){
     
   setTimeout(function(){
-  like_model.classList.remove('active')
+          likeName.classList.remove('open');
+
+
+  },4300);  
+}
+
+function remove_Model_2(){
+    
+  setTimeout(function(){
+  like_model.classList.remove('active');
+
+
   },5000);  
 }
 

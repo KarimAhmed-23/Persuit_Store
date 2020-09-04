@@ -168,6 +168,8 @@ display: inline-block;
   text-decoration: none;
   display: block;
     transition: 1s ease;
+        margin-right: 0 !important;
+
     
 }
 
@@ -1828,7 +1830,7 @@ display: flex;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    animation: slidermove 0.8s ease forwards ;
+    animation: slidermove 0.8s ease forwards   ;
 
     
 
@@ -5257,9 +5259,8 @@ font-size: 15px;
 
 }
 .like-name{
-    background-color: #fff;
+      background-color: #fff;
     width:0;
-    display: none;
     font-size: 13px;
     font-family: "Montserrat", sans-serif;
     line-height: 24px;
@@ -5268,8 +5269,16 @@ font-size: 15px;
         transition: 2s ease;
     box-sizing: border-box;
     height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: width 1s ease ;
+    display: flex;
+
   
 }
+/*
 .like-name p {opacity: 0;transition: 1.2s ease}
 .like-name.active p {animation: fade-In 1.2s ease forwards 3s;}
 .like-name.active{
@@ -5295,6 +5304,47 @@ animation: width-2 2s ease forwards 1.5s;
 
   100% {
     width: 75%;
+  }
+}
+*/
+
+.like-name p {opacity: 0;transition: 1.2s ease}
+.like-name.open p {animation: fade-In 1.2s ease forwards 2.2s;}
+.like-name.open{
+    
+/*animation: width-2 1s ease forwards 1.5s;*/
+    width: 75%;
+    transition-delay: 1.5s;
+
+}
+
+
+@keyframes fade-In {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes width-2 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes remove_width-2 {
+  0% {
+    width: 75%;
+  }
+
+  100% {
+    width: 0%;
   }
 }
 
