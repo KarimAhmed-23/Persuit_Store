@@ -6071,3 +6071,10 @@ font-family: "Montserrat", sans-serif;
 
 /***Dark Mode Button***/
 .lightbox-prev{content: "\f061" !important}
+
+
+
+
+.start-chat a{
+	pointer-events: none;
+}
