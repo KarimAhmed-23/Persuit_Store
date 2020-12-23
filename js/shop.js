@@ -194,7 +194,7 @@ $(function(){
  
 
 
-/*
+
 
 $(function(){
     
@@ -212,7 +212,7 @@ $('.close-chat').click(function(){
   $('.massenger-chat-icon  div').fadeOut();  
 
     
-});*/
+});
     
   /*
  $('.slidebar-fliter').click(function(){
