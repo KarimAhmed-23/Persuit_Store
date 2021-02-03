@@ -806,7 +806,7 @@ let addtion = Number(noti_2.getAttribute('data-counter') || 0);
 
 	function makeTimer() {
 
-		var endTime = new Date(" sep 7 2020 22:37:43 GMT+0200");			
+		var endTime = new Date(" feb 30 2021 22:37:43 GMT+0200");			
 		endTime = (Date.parse(endTime) / 1000);
 
 		var now = new Date();
